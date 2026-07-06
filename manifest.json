@@ -1,12 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "Pencari Data Sheet",
+  "name": "Category Finder",
   "version": "1.0",
-  "description": "Floating button untuk mencari dan memfilter data dari Google Sheet.",
+  "description": "Floating button to search and filter data from Google Sheet.",
   "permissions": [
     "storage",
     "scripting",
-    "tabs"
+    "tabs",
+    "webNavigation",
+    "contextMenus"
   ],
   "host_permissions": [
     "<all_urls>"
@@ -18,8 +20,7 @@
     {
       "matches": [
         "https://search.tiktok-row.net/*",
-        "https://docs.google.com/*",
-        "*://*.google.com/*"
+        "https://search.tiktok-eu.net/*"
       ],
       "js": ["content.js"],
       "run_at": "document_idle",
